@@ -1,0 +1,145 @@
+
+a {
+    color: #000000;
+    text-decoration: none;
+    background-color: transparent;
+    margin-left: 20px;
+}
+
+#mo{
+    background-color: transparent;
+    margin-left: 20px;
+}
+#one{
+    height: 50px;
+    display:flex;
+    background-color: #6ba576;
+}
+.nav-link {
+    color: rgb(0 0 0);
+}
+.nav-item{
+  color: #000000;
+}
+.navbar-light .navbar-nav .nav-link {
+    color: rgb(0 0 0);
+}
+.bg-dark {
+    background-color: #1e7a7e!important;
+}
+body {
+      padding-bottom: 60px; /* Adjust based on your footer height */
+    }
+
+    footer {
+      position: fixed;
+      bottom: 0;
+      height: 60px;
+      width: 100%;
+      background-color: #f8f9fa;
+      padding: 20px 0;
+      text-align: center;
+    }
+    #one{
+      height: 600px;
+      
+    }
+    body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            margin-top: 50px;
+        }
+
+        #paymentForm {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .bankingDetails {
+            display: none;
+        }
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1, h2 {
+    text-align: center;
+    padding: 20px 0;
+    margin: 0;
+  }
+  
+  hr {
+    border: 1px solid #ccc;
+    margin: 20px 0;
+  }
+  
+  /* Container */
+  .container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Profile info */
+  .profile-info {
+    border: 1px solid #eee;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  form {
+    margin: 0;
+    padding: 0;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input, button {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+  
+  button {
+    background-color: #17aa79;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  /* Policy details and claims history */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  table th, table td {
+    padding: 8px;
+    border: 1px solid #ddd;
+  }
+  
+  table thead {
+    background-color: black;
+  }
+  #paymentDetails {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(7, 231, 172, 0.5);
+}

@@ -1,0 +1,34 @@
+{
+    "personalInfo": {
+      "name": "Shihab",
+      "email": "abc@gmail.com",
+      "phone": "0123456789"
+    },
+    "policyDetails": [
+      {
+        "policyNumber": "2201",
+        "coverageType": "Health Insurance",
+        "startDate": "2-10-2015",
+        "endDate": "2-10-2024",
+        "premium": "$10",
+        "status": "Active"
+      }
+    ],
+    
+      "claimsHistory": [
+        {
+          "claimID": "2250",
+          "dateFiled": "2023-02-15",
+          "type": "Car Insurance",
+          "status": "Pending",
+          "amount": "$500"
+        },
+        {
+          "claimID": "2256",
+          "dateFiled": "2023-03-20",
+          "type": " Accident",
+          "status": "Approved",
+          "amount": "$1000"
+        }
+      ]
+    }

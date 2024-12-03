@@ -1,0 +1,123 @@
+<!<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insurance Management System FAQ</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="project.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Custom CSS */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+        .faq-question {
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+        .faq-answer {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-dark" style="cursor: pointer;background-color: #17AA79;" onclick="home()">
+        <h1 class="my-3" style="text-align: center; color: white;">POLICY PILOT</h1>
+    </div>
+   
+        <div class="container">
+            <h1 class="mt-5 mb-4" style="text-align: center;">Frequently Asked Questions</h1>
+    
+            <div class="accordion" id="faqAccordion">
+                <div class="card">
+                    <div class="card-header" id="headingOne">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                What is an insurance management system?
+                            </button>
+                        </h2>
+                    </div>
+    
+                    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#faqAccordion">
+                        <div class="card-body">
+                            An insurance management system is a software application designed to help insurance companies manage their policies, claims, and customer information efficiently.
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="card">
+                    <div class="card-header" id="headingTwo">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseThree">
+                                What types of insurance can be managed using an insurance management system?
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#faqAccordion" >
+                        <div class="card-body">
+                            An insurance management system can be used to manage various types of insurance, including Life insurance, Health insurance and Home insurance.
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="card">
+                    <div class="card-header" id="headingThree">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseTwo">
+                                How does the insurance management system benefit insurance companies?
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#faqAccordion">
+                        <div class="card-body">
+                            The system streamlines various processes such as policy issuance, premium calculations, claims processing, and customer service, leading to improved operational efficiency and customer satisfaction.
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="card">
+                    <div class="card-header" id="headingFour">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
+                                Is the insurance management system secure?
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#faqAccordion" >
+                        <div class="card-body">
+                            Yes, the system employs robust security measures to protect sensitive data such as customer information, policy details, and financial transactions.
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="card">
+                    <div class="card-header" id="headingFive">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseThree">
+                                How secure is an insurance management system in protecting sensitive customer data?
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#faqAccordion" >
+                        <div class="card-body">
+                            Security is a top priority for insurance management system providers and they employ robust measures such as data encryption, access controls and regular security audits to ensure the protection of sensitive customer data. 
+                        </div>
+                    </div>
+                </div>
+                <!-- Add more questions and answers as needed -->
+            </div>
+        </div>
+    
+
+    <!-- Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="project.js"></script>
+    
+</body>
+</html>

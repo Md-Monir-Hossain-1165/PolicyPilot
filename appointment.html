@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PolicyPilot - Schedule Appointment</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="bg-dark" style="cursor: pointer;background-color: #17AA79;" onclick="home()">
+        <h1 class="my-3" style="text-align: center; color: white;">POLICY PILOT</h1>
+    </div>
+    <div class="container">
+        <h2 class="text-center mt-5 mb-4">Schedule Appointment</h2>
+        <form id="appointmentForm" onsubmit="displayAppointmentDetails(event)">
+            <div class="form-group">
+                <label for="clientName">Name:</label>
+                <input type="text" id="clientName" name="subject" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="contact">Number:</label>
+                <input type="text" id="contact" name="subject" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="time">Time:</label>
+                <input type="time" id="time" name="time" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="provider">Provider:</label>
+                <select id="provider" name="provider" class="form-control" required>
+                    <option value="">Select Provider</option>
+                    <option value="monir">Monir</option>
+                    <option value="shihab">Shihab</option>
+                    <option value="tarnum">Tarnum</option>
+                    <option value="madhurjyo">Madhurjyo</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="location">Location:</label>
+                <select id="location" name="location" class="form-control" required>
+                    <option value="">Select Location</option>
+                    <option value="dhaka">Dhaka</option>
+                    <option value="chittagong">Chittagong</option>
+                    <option value="rajshahi">Rajshahi</option>
+                    <option value="sylhet">Sylhet</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Schedule Appointment</button>
+        </form>
+        <div id="appoinmentDis" class="row" style="min-height: 100px;">
+
+        </div>
+        
+            
+        
+    </div>
+
+    <!-- Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="appointment.js"></script>
+    <script src="project.js"></script>
+</body>
+</html>

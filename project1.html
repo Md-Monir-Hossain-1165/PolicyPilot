@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Online Premium Payments</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            margin-top: 50px;
+        }
+
+        #paymentForm {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .bankingDetails {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Online Premium Payments</h2>
+                <form id="paymentForm">
+                    <div class="form-group">
+                        <label for="premiumAmount">Premium Amount:</label>
+                        <input type="number" class="form-control" id="premiumAmount" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="paymentMethod">Payment Method:</label>
+                        <select class="form-control" id="paymentMethod" required>
+                            <option value="creditCard">Credit/Debit Card</option>
+                            <option value="netBanking">Net Banking</option>
+                            <option value="mobileBanking">Mobile Banking</option>
+                        </select>
+                    </div>
+
+                    <!-- Credit/Debit Card Details -->
+                    <div id="creditCardDetails" class="bankingDetails">
+                        <div class="form-group">
+                            <label for="cardNumber">Card Number:</label>
+                            <input type="text" class="form-control" id="cardNumber">
+                        </div>
+                        <div class="form-group">
+                            <label for="expiryDate">Expiry Date:</label>
+                            <input type="text" class="form-control" id="expiryDate">
+                        </div>
+                        <div class="form-group">
+
+                            <label for="cvv">CVV:</label>
+                            <input type="text" class="form-control" id="cvv">
+                        </div>
+                    </div>
+
+                    <!-- Net Banking Details -->
+                    <div id="netBankingDetails" class="bankingDetails">
+                        <div class="form-group">
+                            <label for="bankName">Bank Name:</label>
+                            <input type="text" class="form-control" id="bankName">
+                        </div>
+                    </div>
+
+                    <!-- Mobile Banking Details -->
+                    <div id="mobileBankingDetails" class="bankingDetails">
+                        <div class="form-group">
+                            <label for="mobileBankingProvider">Mobile Banking Provider:</label>
+                            <select class="form-control" id="mobileBankingProvider">
+                                <option value="bkash">bKash</option>
+                                <option value="nagad">Nagad</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="mobileNumber">Mobile Number:</label>
+                            <input type="tel" class="form-control" id="mobileNumber">
+                        </div>
+                        <div class="form-group">
+                            <label for="PIN">PIN:</label>
+                            <input type="password" class="form-control" id="PIN">
+                        </div>
+
+    
+
+                    </div>
+
+                    <button type="button" class="btn btn-primary" onclick="submitPayment()">Make Payment</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function submitPayment() {
+            var premiumAmount = document.getElementById("premiumAmount").value;
+            var paymentMethod = document.getElementById("paymentMethod").value;
+
+            // Check if all fields are filled
+            if (premiumAmount.trim() === "") {
+                alert("Please enter the premium amount.");
+                return;
+            }
+
+            // Additional validation based on the selected payment method
+            switch (paymentMethod) {
+                case "creditCard":
+                    var cardNumber = document.getElementById("cardNumber").value;
+                    var expiryDate = document.getElementById("expiryDate").value;
+                    var cvv = document.getElementById("cvv").value;
+
+                    if (cardNumber.trim() === "" || expiryDate.trim() === "" || cvv.trim() === "") {
+                        alert("Please enter credit/debit card details.");
+                        return;
+                    }
+                    break;
+
+                case "netBanking":
+                    var bankName = document.getElementById("bankName").value;
+
+                    if (bankName.trim() === "") {
+                        alert("Please enter net banking details.");
+                        return;
+                    }
+                    break;
+
+                case "mobileBanking":
+                    var mobileBankingProvider = document.getElementById("mobileBankingProvider").value;
+                    var mobileNumber = document.getElementById("mobileNumber").value;
+                    var PIN = document.getElementById("PIN").value;
+                    if (mobileBankingProvider.trim() === "" || mobileNumber.trim() === ""|| PIN.trim() === "") {
+                        alert("Please enter mobile banking details rightly.");
+                        return;
+                    }
+
+                default:
+                    break;
+            }
+
+            // Process payment (simulate backend processing)
+            alert("Payment Successful!");
+        }
+
+       
+
+// Toggle additional fields based on the selected mobile banking provider
+document.getElementById("paymentMethod").addEventListener("change", function () {
+    // Show the relevant banking details when the user changes the payment method
+    showBankingDetails();
+});
+
+
+function showBankingDetails() {
+    var bankingDetails = document.querySelectorAll(".bankingDetails");
+
+    // Hide all banking details
+    bankingDetails.forEach(function (detail) {
+        detail.style.display = "none";
+    });
+
+    // Show selected banking details
+    var selectedBankingDetail = document.getElementById(document.getElementById("paymentMethod").value + "Details");
+    if (selectedBankingDetail) {
+        selectedBankingDetail.style.display = "block";
+    }
+}
+
+
+    </script>
+</body>
+</html>
+
+
+
+               
+
+
+
+
+
+
+

@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="project.css">
+    <style>
+        .form-group{
+            margin: 10px;
+        }
+    </style>
+  
+</head>
+  <body>
+    
+    <header>
+        <div class="bg-dark" style="cursor: pointer;background-color: #17AA79;" onclick="home()">
+        <h1 class="my-3" style="text-align: center; color: white;">POLICY PILOT</h1>
+    </div>
+
+        <h1>Profile Management</h1>
+    </header>
+    <main>
+        <form id="profile-form">
+            <div class="form-group">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender" required>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+            <br>
+             <div class="form-group">
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" required>
+            </div>
+            <div class="form-group">
+                <label for="insurance-type">Insurance Type:</label>
+                <select id="insurance-type" name="insurance-type" required>
+                    <option value="car">Car Insurance</option>
+                    <option value="life">Life Insurance</option>
+                    <option value="health">Health Insurance</option>
+                    <option value="home">Home Insurance</option>
+                </select>
+            </div>
+            <!-- Update the insurance type form group in the form -->
+
+<!-- Add insurance term select and premium display -->
+<div class="form-group">
+    <label for="insurance-term">Insurance Term:</label>
+    <select id="insurance-term" name="insurance-term" required>
+        <option value="3">3 years</option>
+        <option value="5">5 years</option>
+        <option value="8">8 years</option>
+        <option value="10">10 years</option>
+    </select>
+</div>
+<div id="premium-display" style="display: none;">
+    <label for="premium">Premium Amount:</label>
+    <span id="premium">0</span>
+</div>
+
+
+            <div id="insurance-details" style="display: none;">
+                <!-- Additional fields based on selected insurance type will be added dynamically here -->
+            </div>
+            <div class="form-group">
+                <button type="submit">Update Information</button>
+                <button type="button" onclick="cancelUpdate()">Cancel</button>
+            </div>
+        </form>
+        
+        
+    </div>
+    <!-- Add this table below the form in the <main> section -->
+<table id="user-info-table" class="table" style="display: none;">
+    <thead>
+        <tr>
+            <th></th>
+            <th>Value</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- User information will be displayed here -->
+    </tbody>
+</table>
+<div class="support-links" style="margin-bottom: 50px;">
+    <h2>Need Help?</h2>
+    <p>Visit our Help Center or contact our Customer Support team:</p>
+    <ul>
+        <li><a href="#">Help Center</a></li>
+        <li><a href="#">Contact Us</a></li>
+    </ul>
+</div>
+</main>
+<footer>
+    <p>&copy; PolicyPilot. All rights reserved. 2024 Thank you.</p>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="project.js"></script>
+    </main>
+    <footer>
+        <p>&copy; Insurance Management System</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+      
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

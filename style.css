@@ -1,0 +1,26 @@
+th{
+    color: white;
+}
+.bg-light {
+    background-color: #6b8eb5!important;
+}
+.navbar-light .navbar-brand {
+    color: rgb(0 0 0 / 90%);
+
+   
+}
+a {
+    color: #f5faff;
+    text-shadow: #151515;
+    background-color: transparent;
+}
+.btn-primary {
+    color: #fff;
+    background-color: #007bff00;
+    border-color: #0000002b;
+}
+.btn-primary {
+    color: #050505;
+    background-color: #007bff00;
+    border-color: #000000;
+}

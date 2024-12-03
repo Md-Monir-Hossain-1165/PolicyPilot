@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="project.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous">
+</head>
+<body>
+
+<div class="bg-dark" style="cursor: pointer;background-color: #17AA79;" onclick="home()">
+    <h1 class="my-3" style="text-align: center; color: white;">POLICY PILOT</h1>
+</div>
+<div class="container" style="width: 50%; border: 2px solid black; margin-top: 40px; ">
+
+    <div>
+        <h1 style="color: #1e7a7e;">Online Premium Payments</h1>
+        <form id="paymentForm">
+            <div class="form-group" >
+                <label >Policy:</label>
+                <select class="form-control" required>
+                    <option >Health</option>
+                    <option>Life</option>
+                    <option >Car</option>
+                    <option >Home</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="premiumAmount">Premium Amount:</label>
+                <input type="number" class="form-control" id="premiumAmount" required>
+            </div>
+            <div class="form-group">
+                <label for="paymentMethod">Payment Method:</label>
+                <select class="form-control" id="paymentMethod" required>
+                    <option value="creditCard"><button onclick="Card()">Debit Card</button></option>
+                    <option value="netBanking">Net Banking</option>
+                    <option value="mobileBanking">Mobile Banking</option>
+                </select>
+            </div>
+
+            <!-- Credit/Debit Card Details -->
+            <div id="creditCardDetails" class="bankingDetails">
+                <div class="form-group">
+                    <label for="cardNumber">Card Number:</label>
+                    <input type="text" class="form-control" id="cardNumber">
+                </div>
+                <div class="form-group">
+                    <label for="expiryDate">Expiry Date:</label>
+                    <input type="date" class="form-control" id="expiryDate">
+                </div>
+                <div class="form-group">
+
+                    <label for="cvv">CVV:</label>
+                    <input type="text" class="form-control" id="cvv">
+                </div>
+            </div>
+
+            <!-- Net Banking Details -->
+            <div id="netBankingDetails" class="bankingDetails">
+                <div class="form-group">
+                    <label for="netBankName">Bank Name:</label>
+                    <input type="text" class="form-control" id="netBankName">
+                </div>
+                <div class="form-group">
+                    <label for="netUserID">User ID:</label>
+                    <input type="text" class="form-control" id="netUserID">
+                </div>
+                <div class="form-group">
+                    <label for="netPassword">Password:</label>
+                    <input type="password" class="form-control" id="netPassword">
+                </div>
+            </div>
+
+            <!-- Mobile Banking Details -->
+            <div id="mobileBankingDetails" class="bankingDetails">
+                <div class="form-group">
+                    <label for="mobileBankingProvider">Mobile Banking Provider:</label>
+                    <select class="form-control" id="mobileBankingProvider">
+                        <option value="bkash">BKash</option>
+                        <option value="nagad">Nagad</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="mobileNumber">Mobile Number:</label>
+                    <input type="tel" class="form-control" id="mobileNumber">
+                </div>
+                <div class="form-group">
+                    <label for="PIN">PIN:</label>
+                    <input type="password" class="form-control" id="PIN">
+                </div>
+            </div>
+
+            <button type="button" class="btn btn-primary" onclick="submitPayment()">Make Payment</button>
+        </form>
+    </div>
+
+</div>
+
+<div id="paymentDetails" style="display: none; width: 30%; border: 2px solid black; margin-top: 40px;" class="container" >
+    <h2>Payment Details</h2>
+    <p ><strong>Policy: </strong> <span id="policy"></span></p>
+    <p ><strong> Amount: </strong> <span id="premiumAmountDisplay"></span></p>
+    <p ><strong>Your ID: </strong> <span id="userID"></span></p>
+</div>
+
+<div class="support-links" style="margin-bottom: 100px;">
+    <h2>Need Help?</h2>
+    <p>Visit our Help Center or contact our Customer Support team:</p>
+    <ul>
+        <li><a href="#">Help Center</a></li>
+        <li><a href="#">Contact Us</a></li>
+    </ul>
+</div>
+<footer>
+    <p>&copy; PolicyPilot. All rights reserved. 2024 Thank you.</p>
+</footer>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+<script src="paycla.js"></script>
+<script src="project.js"></script>
+
+</body>
+</html>
