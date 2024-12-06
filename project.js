@@ -1,5 +1,5 @@
 function home(){
-    window.location.href = "InsuranceManagement.html";
+    window.location.href = "index.html";
 }
 
 $(document).ready(function() {
